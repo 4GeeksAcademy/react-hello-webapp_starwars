@@ -55,7 +55,7 @@ export const Navbar = () => {
           >
             My Characters
           </a>
-          <ul className="dropdown-menu position-relative">
+          <ul className="dropdown-menu">
             {store.favCharacters.map((fCharacter, index) => (
               <li key={index}>
                 <button

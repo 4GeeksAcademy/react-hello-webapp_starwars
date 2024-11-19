@@ -39,7 +39,7 @@ let PlanetCard = ({ planet }) => {
               <i className="fa fa-star"></i>
             </button>
             <Link
-              to={"/details/" + planet.name}
+              to={"/planet-details/" + planet.uid}
               type="button"
               className="btn btn-primary mx-2"
             >

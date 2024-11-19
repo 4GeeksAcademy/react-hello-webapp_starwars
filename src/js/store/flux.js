@@ -76,6 +76,23 @@ const getState = ({ getStore, getActions, setStore }) => {
           return false;
         }
       },
+      getPlanetByID: async (id) => {
+        try {
+          const resp = await fetch(process.env.BACKEND_URL + "planets/" + id);
+          if (resp.status === 200) {
+            const data = await resp.json();
+            const retorno = await data.result;
+            console.log(retorno);
+            return { ...retorno.properties, description: retorno.description };
+          } else {
+            console.log("status error: " + resp.status);
+            return false;
+          }
+        } catch (error) {
+          console.error(error);
+          return false;
+        }
+      },
       getPlanets: async () => {
         try {
           const resp = await fetch(process.env.BACKEND_URL + "planets");

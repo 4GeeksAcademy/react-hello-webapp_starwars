@@ -36,7 +36,7 @@ let CharacterCard = ({ character }) => {
               <i className="fa fa-star"></i>
             </button>
             <Link
-              to={"/details/" + character.uid}
+              to={"/character-details/" + character.uid}
               type="button"
               className="btn btn-primary mx-2"
             >
